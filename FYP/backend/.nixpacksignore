@@ -1,8 +1,13 @@
-.venv
-venv
-env
-__pycache__
-.git
+# Ignore everything except the code
+.git/
+node_modules/
+**/node_modules/
+.venv/
+venv/
+env/
+**/__pycache__/
 *.mp4
 *.avi
-datasets/
+*.mov
+*.zip
+*.tar.gz
