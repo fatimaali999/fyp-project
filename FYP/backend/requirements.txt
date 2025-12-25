@@ -9,7 +9,7 @@ python-magic==0.4.27
 werkzeug==3.0.1
 gunicorn==21.2.0
 pytesseract==0.3.10
-opencv-python==4.8.0.74
+opencv-python-headless
 Pillow==10.3.0
 tensorflow==2.19.0
 transformers==4.36.2
