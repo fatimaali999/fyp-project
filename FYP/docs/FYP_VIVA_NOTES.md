@@ -523,7 +523,7 @@ export function useAuth() {
 // src/services/api.ts
 import { z } from 'zod';
 
-const API_URL = 'http://localhost:5001/api';
+const API_URL = 'fyp-project-production-a4a3.up.railway.app/api';
 
 // Validation schemas using Zod
 const loginSchema = z.object({

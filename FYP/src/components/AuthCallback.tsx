@@ -13,7 +13,7 @@ const AuthCallback = () => {
     const token = searchParams.get('token');
     if (token) {
       ApiService.setToken(token);
-      fetch('http://localhost:5001/api/auth/me', {
+      fetch('fyp-project-production-a4a3.up.railway.app/api/auth/me', {
         headers: { Authorization: `Bearer ${token}` }
       })
         .then(res => {

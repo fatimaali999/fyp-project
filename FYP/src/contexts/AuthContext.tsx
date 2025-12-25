@@ -31,7 +31,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     const token = ApiService.getToken();
     if (token && token !== 'demo-token-123456') {
       // Fetch actual user data from backend
-      fetch('http://localhost:5001/api/auth/me', {
+      fetch('fyp-project-production-a4a3.up.railway.app/api/auth/me', {
         headers: { Authorization: `Bearer ${token}` }
       })
         .then(res => {

@@ -202,7 +202,7 @@ After deployment, update frontend API URL:
 const API_URL = 'https://your-app.railway.app/api';
 
 // Or use environment variable:
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5001/api';
+const API_URL = import.meta.env.VITE_API_URL || 'fyp-project-production-a4a3.up.railway.app/api';
 ```
 
 ---

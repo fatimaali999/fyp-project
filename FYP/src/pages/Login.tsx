@@ -55,7 +55,7 @@ const Login = () => {
 
   // OAuth handlers (copied from Signup)
   const handleGoogleLogin = () => {
-    window.location.href = 'http://localhost:5001/api/auth/google/login';
+    window.location.href = 'fyp-project-production-a4a3.up.railway.app/api/auth/google/login';
   };
 
   return (
