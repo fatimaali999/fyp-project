@@ -11,7 +11,7 @@ from moviepy.editor import VideoFileClip
 from pydub import AudioSegment
 from pydub.effects import normalize, compress_dynamic_range
 from pydub.silence import split_on_silence, detect_nonsilent
-import tensorflow as tf
+# import tensorflow as tf  # Disabled - not used (compatibility issues)
 from transformers import pipeline, BlipProcessor, BlipForConditionalGeneration
 import torch
 from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageEnhance
