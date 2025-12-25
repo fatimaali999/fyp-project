@@ -11,13 +11,17 @@ gunicorn==21.2.0
 pytesseract==0.3.10
 opencv-python-headless
 Pillow==10.3.0
-tensorflow==2.19.0
+
+# --- CPU Optimized AI Libraries ---
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch
+torchvision
+tensorflow-cpu
+# ----------------------------------
+
 transformers==4.36.2
-torch==2.7.1
 openai-whisper==20240930
 librosa==0.10.1
 scipy==1.11.4
-#numba==0.58.1
 SpeechRecognition==3.10.0
 noisereduce==3.0.2
-

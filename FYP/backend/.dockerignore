@@ -1,0 +1,77 @@
+# Exclude uploaded and processed videos
+uploads/
+test_dataset/
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.webm
+
+# Exclude model cache
+.cache/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Exclude test files
+test_*.py
+*_test.py
+check_setup.py
+run_evaluation.py
+
+# Exclude logs
+*.log
+logs/
+
+# Exclude environment files
+.env
+.env.local
+.env.*.local
+venv/
+env/
+.venv/
+ENV/
+
+# Exclude git
+.git/
+.gitignore
+.gitattributes
+
+# Exclude OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Exclude development files
+*.ipynb
+.ipynb_checkpoints/
+.vscode/
+.idea/
+
+# Exclude documentation
+docs/
+README.md
+*.md
+
+# Exclude database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Exclude temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+*.swp
+*~
+
+# Exclude node modules (if any)
+node_modules/
+
+# Exclude Python egg info
+*.egg-info/
+dist/
+build/

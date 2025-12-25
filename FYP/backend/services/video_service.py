@@ -565,7 +565,15 @@ class AudioEnhancer:
             try:
                 import whisper
                 print("[AUDIO ENHANCER] Loading Whisper model for filler word detection...")
-                self._whisper_model = whisper.load_model("base")
+                
+                # Use cache directory from environment variable (for Railway deployment)
+                cache_dir = os.getenv('WHISPER_CACHE_DIR', None)
+                if cache_dir:
+                    os.makedirs(cache_dir, exist_ok=True)
+                    self._whisper_model = whisper.load_model("base", download_root=cache_dir)
+                else:
+                    self._whisper_model = whisper.load_model("base")
+                    
                 print("[AUDIO ENHANCER] Whisper model loaded successfully")
             except Exception as e:
                 print(f"[AUDIO ENHANCER] Failed to load Whisper: {e}")
@@ -1713,7 +1721,15 @@ class VideoService:
                 # Use appropriate model based on language
                 model_size = self._get_optimal_whisper_model(language)
                 print(f"[SUBTITLE DEBUG] Loading Whisper model: {model_size}")
-                model = whisper.load_model(model_size)
+                
+                # Use cache directory from environment variable (for Railway deployment)
+                cache_dir = os.getenv('WHISPER_CACHE_DIR', None)
+                if cache_dir:
+                    os.makedirs(cache_dir, exist_ok=True)
+                    model = whisper.load_model(model_size, download_root=cache_dir)
+                else:
+                    model = whisper.load_model(model_size)
+                    
                 print(f"[SUBTITLE DEBUG] Whisper model loaded successfully")
                 
                 whisper_lang = self._get_whisper_language_code(language)
