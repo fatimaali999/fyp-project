@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-const API_URL = 'fyp-project-production-a4a3.up.railway.app/api';
+const API_URL = 'https://fyp-project-production-a4a3.up.railway.app/api';
 
 // Interface for subtitle data
 export interface SubtitleData {

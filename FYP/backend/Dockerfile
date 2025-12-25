@@ -57,7 +57,7 @@ EXPOSE 5001
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \
-    CMD python -c "import requests; requests.get('fyp-project-production-a4a3.up.railway.app/api/test-db', timeout=5)"
+    CMD python -c "import requests; requests.get('https://fyp-project-production-a4a3.up.railway.app/api/test-db', timeout=5)"
 
 # Run the application
 CMD ["python", "app.py"]

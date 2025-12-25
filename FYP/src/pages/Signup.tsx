@@ -53,7 +53,7 @@ const Signup = () => {
     e.preventDefault();
     try {
       signupSchema.parse(formData);
-      const response = await fetch('fyp-project-production-a4a3.up.railway.app/api/auth/register', {
+      const response = await fetch('https://fyp-project-production-a4a3.up.railway.app/api/auth/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -87,7 +87,7 @@ const Signup = () => {
 
   // OAuth handlers
   const handleGoogleLogin = () => {
-    window.location.href = 'fyp-project-production-a4a3.up.railway.app/api/auth/google/login';
+    window.location.href = 'https://fyp-project-production-a4a3.up.railway.app/api/auth/google/login';
   };
 
   return (
